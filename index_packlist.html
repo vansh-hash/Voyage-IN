@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./tab.jpg">
+    <title>Packing List | Voyage INDIA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Gloock&family=Pacifico&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background: linear-gradient(135deg, #FF9933, #FFFFFF, #138808);
+        }
+        .container {
+            display: flex;
+            height: 100%;
+            flex-wrap: wrap;
+        }
+        .left-section, .right-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .left-section {
+            background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+        }
+        .left-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .left-section > * {
+            position: relative;
+            z-index: 1;
+        }
+        .right-section {
+            background-color: #FFF;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+        .right-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url("./todorightsec.jpeg");
+            opacity: 0.5;
+        }
+        .right-section > * {
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            margin-top: 0;
+            font-family: "Gloock", serif;
+        }
+        input[type="text"] {
+            width: calc(100% - 100px);
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #FF9933;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li button {
+            background-color: #FF5733;
+            padding: 5px 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+        p {
+            font-family: "Gloock";
+            font-size: 3rem;
+        } 
+        h2 {
+            margin-top: 0;
+            font-family: "Gloock", serif;
+            font-size: 32px;
+        }
+        #printButton {
+            background-color: #138808;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        #printButton:hover {
+            background-color: #0e6406;
+        }
+        .remove-btn {
+            background-color: #FF5733;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>PackPerfect</h1>
+            <div>
+                <input type="text" id="newItem" placeholder="Add item to pack">
+                <button id="addItem">Add</button>
+            </div>
+            <ul id="packingList"></ul>
+            <button id="printButton">Print Packing List</button>
+        </div>
+        <div class="right-section">
+            <h2>Travel Tips</h2>
+            <p>Remember to pack light and smart for your Indian adventure!</p>
+            <p>Don't forget essentials like comfortable shoes, sunscreen, and a camera to capture memories.</p>
+        </div>
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.container').hide().fadeIn(1500);
+
+            $('#addItem').click(addItem);
+
+            $('#newItem').keypress(function(e) {
+                if (e.which == 13) {
+                    addItem();
+                }
+            });
+
+            function addItem() {
+                let newItem = $('#newItem').val().trim();
+                if (newItem) {
+                    let $li = $('<li>').html(newItem + '<button class="remove-btn">Remove</button>');
+                    $('#packingList').append($li);
+                    $li.hide().slideDown(300);
+                    $('#newItem').val('');
+
+                    $li.find('.remove-btn').click(function() {
+                        $(this).parent().slideUp(300, function() {
+                            $(this).remove();
+                        });
+                    });
+                }
+            }
+
+            $('#packingList').sortable({
+                start: function(e, ui) {
+                    ui.item.addClass('dragging');
+                },
+                stop: function(e, ui) {
+                    ui.item.removeClass('dragging');
+                }
+            });
+
+            function floatAnimation() {
+                $('.right-section').animate({
+                    marginTop: '-=10px'
+                }, 1000).animate({
+                    marginTop: '+=10px'
+                }, 1000, floatAnimation);
+            }
+            floatAnimation();
+
+            $('#printButton').click(function() {
+                $(this).animate({
+                    opacity: 0.5
+                }, 200).animate({
+                    opacity: 1
+                }, 200);
+
+                let listItems = $('#packingList li').map(function() {
+                    return $(this).clone().children().remove().end().text().trim();
+                }).get();
+                
+                let printContent = `
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Packing List</title>
+                        <style>
+                            body { 
+                                font-family: Arial, sans-serif; 
+                                padding: 20px;
+                            }
+                            h1 { 
+                                color: #FF9933; 
+                                text-align: center;
+                            }
+                            ul { 
+                                list-style-type: none; 
+                                padding: 0; 
+                            }
+                            li { 
+                                margin-bottom: 10px;
+                                padding: 10px;
+                                background-color: #f0f0f0;
+                                border-radius: 5px;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <h1>My Packing List</h1>
+                        <ul>
+                            ${listItems.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </body>
+                    </html>
+                `;
+                
+                const printWindow = window.open('', '_blank');
+                printWindow.document.write(printContent);
+                printWindow.document.close();
+                
+                setTimeout(function() {
+                    printWindow.focus();
+                    printWindow.print();
+                }, 250);
+            });
+        });
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.container').hide().fadeIn(1500);
+
+        $('#addItem').click(addItem);
+
+        $('#newItem').keypress(function(e) {
+            if (e.which == 13) {
+                addItem();
+            }
+        });
+
+        function addItem() {
+            let newItem = $('#newItem').val().trim();
+            if (newItem) {
+                let $li = $('<li>').html(newItem + '<button class="remove-btn">Remove</button>');
+                $('#packingList').append($li);
+                $li.hide().slideDown(300);
+                $('#newItem').val('');
+
+                $li.find('.remove-btn').click(function() {
+                    $(this).parent().slideUp(300, function() {
+                        $(this).remove();
+                    });
+                });
+            }
+        }
+
+        $('#packingList').sortable({
+            start: function(e, ui) {
+                ui.item.addClass('dragging');
+            },
+            stop: function(e, ui) {
+                ui.item.removeClass('dragging');
+            }
+        });
+
+        function floatAnimation() {
+            $('.right-section').animate({
+                marginTop: '-=10px'
+            }, 1000).animate({
+                marginTop: '+=10px'
+            }, 1000, floatAnimation);
+        }
+        floatAnimation();
+
+        $('#printButton').click(function() {
+            $(this).animate({
+                opacity: 0.5
+            }, 200).animate({
+                opacity: 1
+            }, 200);
+
+            let listItems = $('#packingList li').map(function() {
+                return $(this).clone().children().remove().end().text().trim();
+            }).get();
+            
+            let printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+            
+            `);
+            printWindow.document.close();
+            
+            setTimeout(function() {
+                printWindow.focus();
+                printWindow.print();
+            }, 250);
+        });
+    });
+</script>
+<html>
+    <!-- <head>
+        <title>Packing List</title>
+        <style>
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            h1 { color: #FF9933; text-align: center; }
+            ul { list-style-type: none; padding: 0; }
+            li { margin-bottom: 10px; padding: 10px; background-color: #f0f0f0; border-radius: 5px; }
+        </style>
+    </head> -->
+    <body>
+        <h1>My Packing List</h1>
+        <ul>${listItems.map(item => `<li>${item}</li>`).join('')}</ul>
+    </body>
+    </html>
+</body>
+</html>

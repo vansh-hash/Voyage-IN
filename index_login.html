@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./tab.jpg">
+    <title>Login | Voyage INDIA</title>
+    <style>
+      
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Gloock&family=Pacifico&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background: linear-gradient(135deg, #FF9933, #FFFFFF, #138808);
+        }
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        .left-section {
+    flex: 1;
+    padding: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('./loginleftside.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.left-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);  
+} 
+
+.left-section > * {
+    position: relative;  /* Ensures content is above the overlay */
+    z-index: 1;
+}
+        .right-section {
+            flex: 1;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1, h2 {
+            margin-top: 0;
+            font-family: "Gloock"
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4ECDC4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .social-icons a {
+            color: white;
+            margin-right: 10px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>Voyage India</h1>
+            <p>Embark on a journey through the wonders of India. Login to start your adventure.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="www.linkedin.com/in/vansh-kumar-8115a8258"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="right-section">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" placeholder="Username" required id="username">
+                <input type="password" placeholder="Password" required id="password">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/3006f7d8b6.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('.container').hide().fadeIn(1500);
+
+            $('input').focus(function() {
+                $(this).animate({ paddingLeft: '20px' }, 300);
+            }).blur(function() {
+                $(this).animate({ paddingLeft: '10px' }, 300);
+            });
+
+            $('#loginForm').submit(function(e) {
+                e.preventDefault();
+                $('.right-section').effect('shake', {times: 2, distance: 10}, 300);
+                // Add login logic here
+                alert('Login functionality to be implemented');
+            });
+
+            // Complex animation
+            function animateBackground() {
+                $('body').animate({
+                    backgroundColor: '#FF9933'
+                }, 5000).animate({
+                    backgroundColor: '#FFFFFF'
+                }, 5000).animate({
+                    backgroundColor: '#138808'
+                }, 5000, animateBackground);
+            }
+            animateBackground();
+        });
+    </script>
+</body>
+</html>

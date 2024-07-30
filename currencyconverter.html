@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter | Voyage INDIA</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./faviconwing.jpeg">
+    <!-- <link rel="shortcut icon" href="./coinExchangeSticker.png" type="image/x-icon"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> -->
+</head>
+<style>
+
+
+
+  /*Howering Shadow*/
+  #desc {
+    margin: 0 0 0 0;
+  }
+
+  #desc div {
+    text-transform: uppercase;
+    color: #e85d04;
+    font: 22px "Comic Sans MS", cursive;
+    -webkit-transition: all 0.12s ease-out;
+    -moz-transition: all 0.12s ease-out;
+    -o-transition: all 0.12s ease-out;
+  }
+
+  #desc div:nth-child(1) {
+    font-size: 22px;
+    letter-spacing: 0.7px;
+  }
+
+  #desc div:nth-child(2) {
+    font-size: 22px;
+    letter-spacing: 0.7px;
+  }
+
+  #desc div:nth-child(3) {
+    font-size: 22px;
+    letter-spacing: 0.7px;
+  }
+
+  #desc div:nth-child(4) {
+    font-size: 22px;
+    letter-spacing: 0.7px;
+  }
+
+  #desc div:nth-child(5) {
+    font-size: 22px;
+    letter-spacing: 0.7px;
+  }
+
+  #desc div:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    text-shadow: 9px 9px 9px #333;
+  }
+
+  #desc a {
+    color: #fe4902;
+    text-decoration: none;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.butnarr a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #000000;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+}
+
+
+li {
+  list-style: none;
+}
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2em;
+  background-color: white;
+  color: rgb(48, 48, 48);
+}
+
+.nav-links a {
+  color: #5b5a5a;
+}
+
+/* LOGO */
+.logo {
+  font-size: 32px;
+}
+
+/* NAVBAR MENU */
+.menu {
+  background-color: white;
+  color:rgb(49, 49, 49);
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+/* .menu li:hover {
+  background-color: #000000;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  background-color: white;
+  color:rgb(49, 49, 49);
+  padding: 5px 14px;
+} */
+.menu li a{
+  text-decoration: none;
+  background-color: white;
+  color: rgb(49, 49, 49);
+  padding: 5px 14px;
+}
+.menu li a:hover{
+  background-color: #000000;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+/* DROPDOWN MENU */
+.services {
+  position: relative; 
+}
+
+.dropdown {
+  background-color: rgb(255, 253, 253);
+  color: white;
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border:1px solid rgba(77, 76, 76, 0.678);
+  border-radius: 8px;
+  top: 26px;
+}
+
+.dropdown li + li {
+  margin-top: 0.2em;
+  background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+/* .dropdown li {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: white;
+  color: black;
+} */
+.dropdown a{
+  color: white;
+  background-color: black;
+    
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown a:hover {
+  /* background-color: rgb(0, 0, 0);
+    color: white; */
+}
+.services:hover .dropdown {
+  display: block;
+}
+
+</style>
+<body style="background-image: url(https://t4.ftcdn.net/jpg/05/05/51/25/360_F_505512599_D6ulJI9hV6aGTP04FPC2XDk5QHGOQtpW.jpg);background-repeat: no-repeat;background-size: 100%;">
+<header style="margin-bottom: 2em;font-family: 'Poppins', sans-serif;width:100vw;">
+  <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo"><a href=".//index.html"><img style="
+      position: relative;
+      display: inline;
+      height: 4rem;
+  
+      " src="./Screenshot (86).png"></a></div>
+
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+
+      <!-- NAVIGATION MENUS -->
+      <div class="menu">
+
+        <li><a href="./index.html">Home</a></li>
+        
+        
+        <li class="services">
+          <a href="#">Top State</a>
+
+          <!-- DROPDOWN MENU -->
+          <div class="dropdown">
+            <a href="./delhi.html">Delhi </a>
+            <a href="./sikkim.html">Sikkim</a>
+            <a href="./kerala.html">Kerala</a>
+            <a href="./rajasthan.html">Rajasthan</a>
+            <a href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/states/gujarat.html">Gujarat</a>
+            </div>
+
+        </li>
+        <li><a href="https://www.tripadvisor.in/TravelersChoice-Hotels-cTop-g293860">Hotel</a></li>
+        <li class="services">
+          <a href="#">Others</a>
+
+          <!-- DROPDOWN MENU -->
+          <div class="dropdown">
+            <a href="./faqs.html">FAQs</a>
+            <a href="./index_packlist.html">Pack Perfect</a>
+            <a href="./currencyconverter.html">Currency Conert</a>
+            <!-- <a href="#">About</a> -->
+            
+            </div>
+
+        </li>
+        <li><a href="./index_login.html">Login</a></li>
+        
+      </div>
+    </ul>
+  </nav>
+  <!-- <div class="butnarr">
+    <a href="./delhi.html"><i class="fas fa-arrow-up"></i></a>
+  </div> -->
+</header>
+
+
+    <div class="container">
+        <h1 id="title">Currency Converter
+        </h1>
+        <img src="./coinExchangeSticker.png" id="coinSticker" alt="coin exchange sticker">
+        
+        <input type="number" id="userValue" min="1" name="userInput" placeholder="100">
+        
+        <div class="selecterContainer">
+            <select id="fromCurrency" name="fromCurrency" title="Convert From"></select>
+            
+            <button type="button" id="switchCurrency">🔁</button>
+
+            <select id="toCurrency" name="toCurrency" title="Convert To"></select>
+        </div>
+        
+        <p id="status"></p>
+        
+        <button type="button" id="btn">Convert</button>
+        
+        <p id="result"></p>
+    </div>
+    
+
+    <!-- JavaScript File -->
+    <script type="module" src="./script.js" defer></script>
+</body>
+<!-- <footer class="footer" style="margin-bottom: 0px;">
+  <p class="text-center text-white">
+      copyright@2023 Voyage India
+  </p>
+</footer> -->
+<!-- <footer class="footer" id="contact" style="background-color: #f9f9f9;">
+  <div class="section_container footer_container">
+    <div class="footer__col">
+      <div class="logo">
+        <a href="#home"><img src="" alt="logo" /></a>
+      </div>
+      <p class="section__description">
+        Discover a world of comfort, luxury, and adventure as you explore
+        our curated selection of hotels, making every moment of your getaway
+        truly extraordinary.
+      </p>
+      <button class="btn">Book Now</button>
+    </div>
+    <div class="footer__col">
+      <h4>QUICK LINKS</h4>
+      <ul class="footer__links">
+        <li><a href="#">Browse Destinations</a></li>
+        <li><a href="#">Special Offers & Packages</a></li>
+        <li><a href="#">Room Types & Amenities</a></li>
+        <li><a href="#">Customer Reviews & Ratings</a></li>
+        <li><a href="#">Travel Tips & Guides</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>OUR SERVICES</h4>
+      <ul class="footer__links">
+        <li><a href="#">Concierge Assistance</a></li>
+        <li><a href="#">Flexible Booking Options</a></li>
+        <li><a href="#">Airport Transfers</a></li>
+        <li><a href="#">Wellness & Recreation</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>CONTACT US</h4>
+      <ul class="footer__links">
+        <li><a href="#">WanderLust@info.com</a></li>
+      </ul>
+      <div class="footer__socials">
+        <a href="#"><img src="facebook.png" alt="facebook" /></a>
+        <a href="#"><img src="instagram.png" alt="instagram" /></a>
+        <a href="#"><img src="youtube.png" alt="youtube" /></a>
+        <a href="#"><img src="twitter.png" alt="twitter" /></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bar">
+    Copyright © Voyage India. All rights reserved.
+  </div>
+</footer> -->
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+}
+body {
+    /* height: 100vh; */
+    background-color: rgb(77, 223, 231);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 300px;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: white;
+}
+#title {
+    text-align: center;
+    padding: 4px 0;
+    border-bottom: 1px solid black;
+}
+#coinSticker {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+#userValue {
+    display: block;
+    width: 100%;
+    padding: 10px 8px;
+    margin: 12px 0;
+    border-radius: 4px;
+    border: 1px solid gray;
+    outline: transparent;
+    font-family: monospace;
+}
+.selecterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+.selecterContainer select {
+    padding: 2px;
+    border-radius: 4px;
+    max-width:40%;
+    outline: transparent;
+}
+#switchCurrency {
+    font-size: 22px;
+    border: 0;
+    outline: transparent;
+}
+#status {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 12px;
+    color: rgb(143, 132, 132);
+    text-transform: capitalize;
+}
+#btn {
+    width: 100%;
+    background-color: rgb(10, 235, 29);
+    border: none;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.14s;
+}
+#btn:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgb(0, 0, 0);
+}
+#result {
+    width: 100%;
+    padding: 12px 16px;
+    font-weight: 550;
+    text-align: center;
+    border-radius: 6px;
+    background-color: rgba(77, 231, 123, 0.3);
+    
+     /* background-color: #4caf50; */
+}
+.footer{
+    background-color: black;padding: 5px;width:100vw;
+    position: fixed;
+  bottom: 0px;
+  left: 0px;
+    /* margin-top: 2em; */
+}
+.text-center{
+    text-align: center ;
+}
+
+.text-white{
+    color: white;
+}
+</style>
+</html>

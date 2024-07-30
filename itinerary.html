@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./tab.jpg">
+    <title>Travel Planner | Voyage INDIA</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Gloock&family=Pacifico&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url('https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 1.5rem;
+             font-family: "Gloock";
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+             font-family: "Gloock";
+        }
+
+        input, select {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+             font-family: "Gloock";
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #confirmation {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            text-align: center;
+            opacity: 0;
+            font-family: "Gloock";
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                
+            }
+
+            input, select, button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Odyssey of India</h1>
+        <form id="travelForm">
+            <label for="destination">Where would you like to travel?</label>
+            <select id="destination" required>
+                <option value="">Select a destination</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Kerala">Kerala</option>
+            </select>
+
+            <label for="travelDate">When do you plan to travel?</label>
+            <input type="date" id="travelDate" required>
+
+            <label for="travelers">How many people are traveling?</label>
+            <input type="number" id="travelers" min="1" required>
+
+            <label for="email">Your email address:</label>
+            <input type="email" id="email" required>
+
+            <button type="submit">Plan My Trip</button>
+        </form>
+        <div id="confirmation">
+            Thank you for your interest in traveling with Voyage India! We will share your personalized itinerary via email within the next 3 hours.
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Fade in and slide up animation for the container
+            $('.container').animate({
+                opacity: 1,
+                transform: 'translateY(0)'
+            }, 1000);
+
+            // Add animation to form fields
+            $('input, select').on('focus', function() {
+                $(this).animate({
+                    boxShadow: '0 0 8px rgba(76, 175, 80, 0.6)'
+                }, 300);
+            }).on('blur', function() {
+                $(this).animate({
+                    boxShadow: 'none'
+                }, 300);
+            });
+
+            // Add animation to submit button
+            $('button').on('mouseenter', function() {
+                $(this).animate({
+                    backgroundColor: '#45a049',
+                    fontSize: '1.1rem'
+                }, 300);
+            }).on('mouseleave', function() {
+                $(this).animate({
+                    backgroundColor: '#4CAF50',
+                    fontSize: '1rem'
+                }, 300);
+            });
+
+            // Form submission animation
+            $('#travelForm').on('submit', function(e) {
+                e.preventDefault();
+                $(this).fadeOut(500, function() {
+                    $('#confirmation').fadeIn(500).animate({
+                        opacity: 1
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

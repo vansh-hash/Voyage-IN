@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./tab.jpg" />
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <style>
+      /* body{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+      } */
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: 0px;
+      }
+
+      .bento {
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid red; */
+        /* max-height: fit-content; */
+        height: 800px;
+        width: 75vw;
+        gap: 1em;
+        /* padding-left: 5%; */
+        /* padding: 5em; */
+        overflow: hidden;
+        /* background-color: burlywood; */
+        /* align-items: center; */
+        /* padding: 2em; */
+      }
+      .bento img {
+        height: 100%;
+        width: 100%;
+        /* object-fit: contain; */
+        display: flex;
+      }
+
+      .right {
+        display: flex;
+        flex: 2;
+        /* border: 1px solid red; */
+        border-radius: 2em;
+        flex-direction: column;
+        /* padding: 2em; */
+        gap: 1em;
+      }
+      .left {
+        flex: 1;
+        /* border: 1px solid red; */
+        border-radius: 2em;
+        display: flex;
+        flex-direction: column;
+        /* padding : 2em; */
+        gap: 1em;
+      }
+
+      .row {
+        /* border: 2px solid red; */
+        flex: 1;
+        border-radius: 2em;
+        text-align: center;
+      }
+      b{
+        font-family: "Bodoni Moda SC";
+      }
+
+      .row:hover {
+        transform: translate(-0.25rem, -0.25rem);
+
+        box-shadow: 0.25rem 0.25rem var(--bg);
+      }
+
+      .col {
+        /* border: 2px solid red; */
+        flex: 1.5;
+        border-radius: 2em;
+        text-align: center;
+      }
+
+      #col-1 {
+        background-image: url('./Amber\ Fort\ -\ Historical\ Places\ in\ Rajasthan\ _\ India.jpeg.jpg');
+        background-size: cover;
+      }
+      #col-2 {
+        background-image: url('./VARKALA.jpg');
+        background-size: cover;
+      }
+      #row-1 {
+        background-image: url('./Mumbai_Aug_2018_\(43397784544\).jpg');
+        background-size: cover;
+      }
+      #row-2 {
+        background-image: url('./download-textile.webp');
+        background-size: cover;
+      }
+      #row-3 {
+        background-image: url('./india-best-places-to-visit-varanasi.jpg');
+        background-size: cover;
+      }
+
+      .india {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        height: 700px;
+        width: 100vw;
+        flex-direction: row;
+        /* overflow: hidden; */
+      }
+
+      /* @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap'); */
+
+      .india .text {
+        /* border: 1px solid red; */
+        flex: 0.8;
+        text-align: left;
+      }
+
+      .india .images {
+        /* border: 1px solid red; */
+        flex: 0.7;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        /* padding-left: 40px; */
+      }
+      /* .main-title {
+        /* font-family: "Bungee Spice"; */
+        /* position: absolute; */
+        /* font-weight: 400;
+        font-style: normal; */
+     
+
+      @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      h1 {
+        font-family: "Kanit", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        padding-left: 25px;
+        padding-top: 90px;
+        font-size: 5rem;
+      }
+      /* .india img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border: 2px solid black;
+          border-radius: 2em;
+      } */
+
+      .btn {
+        --bg: #000;
+        --hover-bg: #81ff83;
+        --hover-text: #000;
+        color: #fff;
+        cursor: pointer;
+        border: 1px solid var(--bg);
+        border-radius: 4px;
+        padding: 0.8em 2em;
+        background: var(--bg);
+        transition: 0.2s;
+        width: 250px;
+        position: relative;
+        margin: 10px;
+      }
+
+      .btn:hover {
+        color: var(--hover-text);
+        transform: translate(-0.25rem, -0.25rem);
+        background: var(--hover-bg);
+        box-shadow: 0.25rem 0.25rem var(--bg);
+      }
+
+      .btn:active {
+        transform: translate(0);
+        box-shadow: none;
+      }
+
+      #b2 {
+        right: 30%;
+        left: 15%;
+        bottom: 45%;
+        top: 15%;
+      }
+      #b3 {
+        right: 46%;
+        left: 69%;
+        top: 35%;
+        bottom: 20%;
+      }
+      #b4 {
+        right: 80%;
+        left: 38%;
+        top: 19%;
+        bottom: 28%;
+      }
+      #b5 {
+        right: 54%;
+        left: 25%;
+        top: 25%;
+        bottom: 30%;
+      }
+      #b6 {
+        right: 45%;
+        left: 61%;
+        top: 40%;
+        bottom: 15%;
+      }
+      #b7 {
+        right: 58%;
+        left: 54%;
+        top: 355;
+        bottom: 26%;
+      }
+      .map {
+        height: 700px;
+        width: 100vw;
+        /* background-color: rgb(254, 111, 59); */
+        display: flex;
+        flex-direction: row;
+        background-image: url('./route-icon-between-two-points-with-dotted-path-and-location-pin-free-vector.jpg');
+      }
+
+      .service {
+        flex: 0.7;
+        /* border: 2px solid black; */
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        padding-left: 15px;
+        padding-top: 145px;
+        color: #000;
+      }
+
+      .bxton {
+        flex: 1.5;
+        /* border: 2px solid black; */
+        display: flex;
+        flex-direction: column;
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      .butnarr a {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: #fff;
+        background: #000000;
+        padding: 7px 12px;
+        font-size: 18px;
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.15);
+      }
+      a {
+        text-decoration: none;
+      }
+
+      li {
+        list-style: none;
+      }
+      /* NAVBAR STYLING STARTS */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.2em;
+        background-color: white;
+        color: rgb(48, 48, 48);
+      }
+
+      .nav-links a {
+        color: #5b5a5a;
+      }
+
+      /* LOGO */
+      .logo {
+        font-size: 32px;
+        padding-left: 30px;
+      }
+
+      /* NAVBAR MENU */
+      .menu {
+        background-color: white;
+        color: rgb(49, 49, 49);
+        display: flex;
+        gap: 1em;
+        font-size: 18px;
+      }
+
+      /* .menu li:hover {
+        background-color: #000000;
+        color: white;
+        border-radius: 5px;
+        transition: 0.3s ease;
+      }
+
+      .menu li {
+        background-color: white;
+        color:rgb(49, 49, 49);
+        padding: 5px 14px;
+      } */
+      .menu li a {
+        text-decoration: none;
+        background-color: white;
+        color: rgb(49, 49, 49);
+        padding: 5px 14px;
+      }
+      .menu li a:hover {
+        background-color: #000000;
+        color: white;
+        border-radius: 5px;
+        transition: 0.3s ease;
+      }
+      /* DROPDOWN MENU */
+      .services {
+        position: relative;
+      }
+
+      .dropdown {
+        background-color: rgb(255, 253, 253);
+        color: white;
+        padding: 1em 0;
+        position: absolute; /*WITH RESPECT TO PARENT*/
+        display: none;
+        border: 1px solid rgba(77, 76, 76, 0.678);
+        border-radius: 8px;
+        top: 26px;
+      }
+
+      .dropdown li + li {
+        margin-top: 0.2em;
+        background-color: rgb(0, 0, 0);
+        color: white;
+      }
+
+      .dropdown a {
+        color: white;
+        background-color: black;
+
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+      }
+
+      /* .dropdown a:hover {
+        /* background-color: rgb(0, 0, 0);
+          color: white; */
+      
+      .services:hover .dropdown {
+        display: block;
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+
+      footer {
+        position: relative;
+        width: 100%;
+        background: #3586ff;
+        min-height: 100px;
+        padding: 20px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      footer .social_icon,
+      footer .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        background-color: transparent;
+      }
+
+      footer .social_icon li,
+      footer .menu li {
+        list-style: none;
+      }
+      footer .social_icon li a {
+        font-size: 2em;
+        color: #ccc;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+      }
+      footer .social_icon li a:hover {
+        transform: translateY(-15px);
+        color: blue;
+      }
+
+      footer .menu li a {
+        font-size: 1.2em;
+        color: gray;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+        opacity: 0.75;
+      }
+      footer .menu li a:hover {
+        opacity: 1;
+        color: #fff;
+      }
+      footer p {
+        color: #eee;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+      }
+
+      /*wave and animation*/
+      footer .wave {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url('https://i.ibb.co/rZt4Nhg/wave.png');
+        background-size: 1000px 100px;
+      }
+
+      footer .wave#wave1 {
+        z-index: 1000;
+        opacity: 1;
+        bottom: 0;
+        animation: animateWave 4s linear infinite;
+      }
+
+      footer .wave#wave2 {
+        z-index: 999;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animateWave_02 4s linear infinite;
+      }
+      footer .wave#wave3 {
+        z-index: 1000;
+        opacity: 0.2;
+        bottom: 0;
+        animation: animateWave 3s linear infinite;
+      }
+
+      footer .wave#wave4 {
+        z-index: 999;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animateWave_02 3s linear infinite;
+      }
+
+      @keyframes animateWave {
+        0% {
+          background-position-x: 1000px;
+        }
+        100% {
+          background-position-x: 0px;
+        }
+      }
+
+      @keyframes animateWave_02 {
+        0% {
+          background-position-x: 0px;
+        }
+        100% {
+          background-position-x: 1000px;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        /* background-color: #070a11; */
+        /* color: white; */
+        display: grid;
+        min-block-size: 100vh;
+        place-content: center;
+        font-family: system-ui;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .tag-list {
+        margin: 0;
+        padding-inline: 0;
+        list-style: none;
+      }
+
+      .tag-list li {
+        padding: 1rem;
+        background: #364a71;
+        border-radius: 0.5rem;
+        /* box-shadow: 0 0.5rem 1rem -0.25rem #010e28; */
+        transition: 300ms;
+        cursor: pointer;
+        color: white;
+      }
+
+      .scroller {
+        max-width: 600px;
+        /*     border: 3px solid lime; */
+      }
+
+      .scroller__inner {
+        display: flex;
+        padding-block: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .scroller[data-animated="true"] {
+        overflow: hidden;
+        -webkit-mask: linear-gradient(
+          90deg,
+          transparent,
+          white 20%,
+          white 80%,
+          transparent
+        );
+        mask: linear-gradient(
+          90deg,
+          transparent,
+          white 20%,
+          white 80%,
+          transparent
+        );
+      }
+
+      .scroller[data-animated="true"] .scroller__inner {
+        width: max-content;
+        flex-wrap: nowrap;
+        animation: scroll var(--_animation-duration, 40s)
+          var(--_animation-direction, forwards) linear infinite;
+        animation-delay: 1s;
+      }
+
+      .scroller[data-direction="left"] {
+        --_animation-direction: forwards;
+      }
+      .scroller[data-direction="right"] {
+        --_animation-direction: reverse;
+      }
+
+      .scroller[data-direction="slow"] {
+        --_animation-duration: 15s;
+      }
+      .scroller[data-speed="fast"] {
+        --_animation-duration: 10s;
+      }
+
+      @keyframes scroll {
+        to {
+          transform: translate(calc(-50% - 0.5rem));
+        }
+      }
+
+      img {
+        max-height: 200px;
+        max-width: 200px;
+        /* box-shadow: 5px 5px 2px black; */
+
+        border-radius: 10px;
+        object-fit: cover;
+        transition: 300ms;
+        filter: grayscale(0.2);
+        cursor: pointer;
+      }
+
+      .scroller[data-animated="true"]
+        .scroller__inner:has(img:hover, img:active, img:focus) {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+
+      img:hover,
+      img:focus,
+      img:active {
+        transform: scale(1.1);
+        filter: saturate(1.5);
+        box-shadow: 3px 3px black;
+      }
+
+      .scroller[data-animated="true"]
+        .scroller__inner:has(li:hover, li:active, li:focus) {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+
+      li:hover,
+      li:focus,
+      li:active {
+        transform: scale(1.1);
+        filter: saturate(3);
+      }
+
+      h4 {
+        padding-left: 25px;
+        padding-top: 50px;
+        font-size: 2rem;
+        font-family: "Bodoni Moda SC";
+        color: #364a71;
+      }
+      h3 {
+        padding-left: 25px;
+        /* padding-top: 50px; */
+        font-size: 1rem;
+        color: #364a71;
+        font-family:  "Bodoni Moda SC";
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+      .dui h2 {
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 4rem;
+        font-family: "Bodoni Moda SC";
+        font-weight: 400;
+        font-style: normal;
+        color: #364a71;
+        
+     @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Gloock&display=swap');
+
+      }h1{
+        font-family: "Bodoni Moda SC";
+        color: #364a71;
+      }
+
+      /* I put some hover effect and make the animation paused for on hover with animation play state.
+      Read about animation-play-state here
+      https://www.quackit.com/css/codes/marquees/how_to_pause_a_marquee_on_hover.cfm#:~:text=The%20animation%2Dplay%2Dstate%20property,their%20cursor%20over%20the%20marquee. */
+    </style>
+    <title>VOYAGE-INDIA</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header>
+      <nav
+        class="navbar"
+        style="
+          font-family: 'Poppins', sans-serif;
+          border-bottom-style: solid;
+          border-bottom-color: #000000;
+          border-bottom-width: 0.1em;
+        "
+      >
+        <div class="logo">
+          <a href="./index.html"
+            ><img
+              style="position: relative; display: inline; height: 4rem"
+              src="./Screenshot.png"
+          /></a>
+        </div>
+
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+          <div class="menu">
+            <li><a href="./itinerary.html">Personalize</a></li>
+
+            <li class="services">
+              <a href="#">Explore</a>
+
+              <!-- DROPDOWN MENU -->
+              <div class="dropdown">
+                <a href="./delhi.html">Delhi </a>
+                <a href="./sikkim.html">Sikkim</a>
+                <a href="./kerala.html">Kerala</a>
+                <a href="./rajasthan.html">Rajasthan</a>
+                <!-- <a href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/states/gujarat.html">Gujarat</a> -->
+                   
+                <!-- <a href="/">Gujarat</a> -->
+              </div>
+            </li>
+            <li><a href="https://www.tripadvisor.in/TravelersChoice-Hotels-cTop-g293860">Hotel</a></li>
+            <li class="services">
+              <a href="#">Others</a>
+
+              <!-- DROPDOWN MENU -->
+              <div class="dropdown">
+                <!-- <a href="./itinerary.html">Personalize</a> -->
+                <a href="./faqs.html">FAQs</a>
+                <a href="./index_packlist.html">Pack Perfect</a>
+                <a href="./currencyconverter.html">Currency Converter</a>
+                <!-- <a href="#">About</a> -->
+              </div>
+            </li>
+            <li><a href="./index_login.html">Login</a></li>
+          </div>
+        </ul>
+      </nav>
+
+      <hr />
+    </header>
+    <!-- top area -->
+    <div class="india">
+      <div class="text">
+        <div class="main-title">
+          <h1>INCREDIBLE<br />INDIA</h1>
+        </div>
+        <div class="side-title">
+          <h4>
+            WANDER LIKE A TRAVELLER<br />
+            NOT LIKE A TOURIST !!!
+          </h4>
+          <br />
+          <h3>EXPLORE INDIA LIKE NEVER BEFORE</h3>
+        </div>
+      </div>
+      <div class="images">
+        <!-- Just tring Infinite horozontal scroll animation from Kevin Powell tutorial. He is a real CSS guru
+            I think I have learnt a lot of new things in just one vid. here is the yt link > https://youtu.be/iLmBy-HKIAw?si=qhYQSBCk7dd-EJ6w -->
+
+        <!-- <h1>Infinite Scrolling Animation</h1> -->
+
+        <div class="scroller" data-direction="left" data-speed="fast">
+          <ul class="tag-list scroller__inner">
+            <li>MANALI</li>
+            <li>VARANASI</li>
+            <li>PORT BLAIR</li>
+            <li>GANGTOK</li>
+            <li>PURI</li>
+            <li>KUCHH</li>
+            <li>KOCHI</li>
+          </ul>
+        </div>
+
+        <div class="scroller" data-direction="right" data-speed="slow">
+          <div class="scroller__inner tag-list">
+            <img src="./pinterest_ aestheticmaybe.jpeg.jpg" />
+            <img
+              src="./The most bewitchingly beautiful pictures of Rajasthan.jpeg.jpg"
+            />
+            <img src="./Munnar Town, Kerala, India 🇮🇳.jpeg.jpg" />
+            <img
+              src="./india-in-pictures-beautiful-places-to-photograph-jahangiri-palace-agra.jpg"
+            />
+            <img src="./Mysore palace, Mysore Karnataka_.jpeg.jpg" />
+            <img
+              src="./top-10-tourist-attractions-in-india-taj-mahal-building.jpg"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1570288685280-7802a8f8c4fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80"
+              alt="a little monkey with a long mustache"
+            />
+          </div>
+        </div>
+
+        <div class="scroller" data-direction="left" data-speed="fast">
+          <ul class="tag-list scroller__inner">
+            <li>COORG</li>
+            <li>LEH</li>
+            <li>KASOL</li>
+            <li>DELHI</li>
+            <li>GOA</li>
+            <li>LAKSHAYDWEEP</li>
+            <li>SEELAMPUR</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- discover -->
+    <div class="dui">
+      <h2><b>~ DISCOVER ~</b></h2>
+    </div>
+
+    <div
+      style="
+        width: 100vw;
+        height: auto;
+        background-color: white;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+      "
+    >
+      <div class="bento">
+        <div class="left">
+          <div class="col" id="col-1"></div>
+          <div class="col" id="col-2"></div>
+        </div>
+        <div class="right">
+          <div class="row" id="row-1"></div>
+          <div class="row" id="row-2"></div>
+          <div class="row" id="row-3"></div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <!-- card area -->
+
+    <!-- <div style="height: 200px; width: 100vw;"></div> -->
+    <!-- service buttons -->
+
+    <div class="map">
+      <div class="service"><h1>Our <br>Services</h1></div>
+      <div class="bxton">
+        <!-- <button class="btn" id="b1">cklck1</button> -->
+        <button class="btn" id="b2">Itinerary</button>
+        <button class="btn" id="b3">Reservations</button>
+        <button class="btn" id="b4">Trip Planner</button>
+        <button class="btn" id="b5">Currency Converter</button>
+        <button class="btn" id="b6">Pack Perfect</button>
+        <button class="btn" id="b7">Explore</button>
+      </div>
+    </div>
+
+    <!-- volunteer -->
+
+    <div class="volunteer">
+      <p>volunteer banoge humare liye?</p>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social_icon">
+        <li>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+      </ul>
+
+      <ul class="menu">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./faqs.html">FAQ</a></li>
+        <li><a href="./itinerary.html">Personalize</a></li>
+        <li><a href="./delhi.html">Explore</a></li>
+        <li><a href="./currencyconverter.html">Currency Convert</a></li>
+      </ul>
+      <p>&copy2024 Voyage INDIA | All Rights Reserved</p>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      const scrollers = document.querySelectorAll(".scroller");
+
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        addAnimation();
+      }
+
+      function addAnimation() {
+        scrollers.forEach((scroller) => {
+          scroller.setAttribute("data-animated", true);
+
+          const scrollerInner = scroller.querySelector(".scroller__inner");
+          const scrollerContent = Array.from(scrollerInner.children);
+
+          scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

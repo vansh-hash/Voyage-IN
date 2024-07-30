@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./tab.jpg">
+    <title>Voyage India - Hotel Booking & Itinerary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Gloock&family=Pacifico&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            color: #333;
+        }
+        body {
+            background-image: url('./todorightsec.jpeg');
+            background-size:cover;
+            background-position:50% 50%;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .hotel-option {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        .hotel-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .hotel-image {
+            flex: 0 0 200px;
+            margin-right: 20px;
+        }
+        .hotel-image img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .hotel-info {
+            flex: 1;
+        }
+        .hotel-title {
+            font-size: 1.5em;
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        .rating {
+            color: #f39c12;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #27ae60;
+        }
+        .amenities {
+            margin-top: 10px;
+        }
+        .amenities i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+        .view-deal, .sort-button, .search-button, .load-more {
+            background-color: #4ec756;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .view-deal:hover, .sort-button:hover, .search-button:hover, .load-more:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        .sort-container, .search-container {
+            margin-bottom: 20px;
+        }
+        .search-input {
+            padding: 14px 22px;
+            border-radius: 30px;
+            border: 2px solid #bdc3c7;
+            width: 280px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 12px rgba(52, 152, 219, 0.5);
+        }
+        .load-more {
+            display: block;
+            margin: 20px auto;
+        }
+        @media (max-width: 768px) {
+            .hotel-option {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .hotel-image {
+                flex: 0 0 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .sort-container, .search-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .sort-button, .search-button, .search-input {
+                margin-bottom: 10px;
+            }
+            .search-input {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+        h1{
+            font-family: "Gloock"
+        }
+        p{
+            font-family: "Gloock"
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Voyage India</h1>
+            <p>Discover the best hotels across India</p>
+        </header>
+        
+        <div class="content">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search hotels...">
+                <button class="search-button" id="searchButton">Search</button>
+            </div>
+            
+            <div class="sort-container">
+                <button class="sort-button" data-sort="price">Sort by Price</button>
+                <button class="sort-button" data-sort="rating">Sort by Rating</button>
+            </div>
+            
+            <div class="hotel-list">
+                <!-- Hotel cards will be dynamically added here -->
+            </div>
+            
+            <button id="loadMore" class="load-more">Load More</button>
+        </div>
+    </div>
+
+    <script>
+        const hotelData = [
+            {
+                name: "The Majestic Palace",
+                image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+                rating: 4.5,
+                price: 12000,
+                amenities: ["wifi", "swimming-pool", "utensils", "spa"]
+            },
+            {
+                name: "Royal Rajasthan Retreat",
+                image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80",
+                rating: 5,
+                price: 15000,
+                amenities: ["wifi", "swimming-pool", "utensils", "horse"]
+            },
+            {
+                name: "Kerala Backwater Bliss",
+                image: "https://www.keralabackwater.com/blog/wp-content/uploads/2017/01/vasundhara-sarovar-premiere.jpg",
+                rating: 4,
+                price: 8000,
+                amenities: ["wifi", "utensils", "fish", "leaf"]
+            },
+            {
+                name: "Himalayan Haven",
+                image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                rating: 3.5,
+                price: 6000,
+                amenities: ["wifi", "utensils", "hiking", "mountain"]
+            },
+            // Add more hotel objects here as needed
+        ];
+
+        let currentIndex = 0;
+        const itemsPerLoad = 2;
+
+        function createHotelCard(hotel) {
+            return `
+                <div class="hotel-option" data-price="${hotel.price}" data-rating="${hotel.rating}">
+                    <div class="hotel-image">
+                        <img src="${hotel.image}" alt="${hotel.name}">
+                    </div>
+                    <div class="hotel-info">
+                        <h3 class="hotel-title">${hotel.name}</h3>
+                        <div class="rating">
+                            ${getRatingStars(hotel.rating)}
+                        </div>
+                        <p class="price">₹${hotel.price} per night</p>
+                        <div class="amenities">
+                            ${getAmenityIcons(hotel.amenities)}
+                        </div>
+                        <button class="view-deal">View Deal</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function getRatingStars(rating) {
+            let stars = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    stars += '<i class="fas fa-star"></i>';
+                } else if (i - 0.5 <= rating) {
+                    stars += '<i class="fas fa-star-half-alt"></i>';
+                } else {
+                    stars += '<i class="far fa-star"></i>';
+                }
+            }
+            return stars;
+        }
+
+        function getAmenityIcons(amenities) {
+            return amenities.map(amenity => `<i class="fas fa-${amenity}" title="${amenity}"></i>`).join('');
+        }
+
+        function loadMoreHotels() {
+            const hotelList = $('.hotel-list');
+            for (let i = 0; i < itemsPerLoad && currentIndex < hotelData.length; i++) {
+                const hotel = hotelData[currentIndex];
+                const hotelCard = $(createHotelCard(hotel)).hide();
+                hotelList.append(hotelCard);
+                hotelCard.fadeIn(500);
+                currentIndex++;
+            }
+            if (currentIndex >= hotelData.length) {
+                $('#loadMore').fadeOut(300);
+            }
+        }
+
+        function sortHotels(criteria) {
+            const hotelList = $('.hotel-list');
+            const hotels = hotelList.children('.hotel-option').get();
+            
+            hotels.sort((a, b) => {
+                const aValue = parseFloat($(a).data(criteria));
+                const bValue = parseFloat($(b).data(criteria));
+                return criteria === 'price' ? aValue - bValue : bValue - aValue;
+            });
+            
+            $.each(hotels, function(index, hotel) {
+                hotelList.append(hotel);
+            });
+        }
+
+        function searchHotels() {
+            const searchTerm = $('#searchInput').val().toLowerCase();
+            $('.hotel-option').each(function() {
+                const hotelName = $(this).find('.hotel-title').text().toLowerCase();
+                if (hotelName.includes(searchTerm)) {
+                    $(this).fadeIn(300);
+                } else {
+                    $(this).fadeOut(300);
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            loadMoreHotels();
+            
+            $('#loadMore').on('click', function() {
+                loadMoreHotels();
+            });
+
+            $('#searchInput').on('input', function() {
+                searchHotels();
+            });
+
+            $('#searchButton').on('click', function() {
+                searchHotels();
+            });
+
+            $('.sort-button').on('click', function() {
+                const criteria = $(this).data('sort');
+                sortHotels(criteria);
+            });
+        });
+    </script>
+</body>
+</html>

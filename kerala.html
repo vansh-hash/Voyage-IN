@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala | Voyage India</title>
+    <link rel="shortcut icon" href="./faviconwing.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> -->
+
+
+</head>
+<style>
+    img.img1 {
+        text-align: left;
+        width: 125px;
+        height: 130px;
+    }
+
+    .Heading {
+        font-family: 'Lucida Calligraphy', cursive;
+        background-color: #03071e;
+        text-align: center;
+        font-size: 59px;
+        color: #faa307;
+    }
+
+    .mar {
+        font-family: 'Lucida Calligraphy', cursive;
+        background-color: #061b94;
+        color: #ffffff;
+        font-size: 25px;
+    }
+
+    .linkers {
+        display: inline;
+        text-decoration: none;
+        background-color: #9d0208;
+        color: #03071e;
+        word-spacing: 3px;
+        text-align: center;
+        font-size: 45px;
+        width: 35px;
+    }
+
+    a {
+        text-align: center;
+        text-decoration: none;
+        color: #6AD194;
+    }
+
+    a:hover {
+        color: #C48493;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+        text-align: center;
+    }
+
+    p.pcul {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 350px;
+        margin-right: 350px;
+    }
+
+    #visit {
+        font-size: 25px;
+        background-color: blue;
+
+    }
+
+    img.taj {
+        text-align: center;
+        background color: orange;
+        margin;
+        0px;
+    }
+
+    .mar1 {
+        font-size: 25px;
+        color: grey;
+        background-color: blue;
+    }
+
+    .deve {
+        color: red;
+    }
+
+    .contact {
+        background-color: black;
+        color: red;
+    }
+
+    .parts {
+        background-color: #ffffeb;
+    }
+
+    .develop {
+        background-color: #aaffaa;
+        color: red;
+    }
+
+    .city {
+        background-color: #ffffeb;
+    }
+
+    .home {
+        background-color: #ffffeb;
+    }
+
+    .wondertaj {
+        background-color: #ffffeb;
+    }
+
+    p.phome {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 350px;
+        margin-right: 250px;
+    }
+
+    p.ptaj {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 350px;
+        margin-right: 350px;
+    }
+
+
+
+    /*Scroll to TOP Button*/
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+        opacity: 0.6;
+    }
+
+    */ #myBtn:hover {
+        opacity: 1
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+/**{
+   font-family: 'Poppins', sans-serif;
+}*/
+.butnarr a{
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  color: #fff;
+  background: #000000;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+}
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2em;
+  background-color: white;
+  color: rgb(48, 48, 48);
+}
+
+.nav-links a {
+  color: #5b5a5a;
+}
+
+/* LOGO */
+.logo {
+  font-size: 32px;
+}
+
+/* NAVBAR MENU */
+.menu {
+  background-color: white;
+  color:rgb(49, 49, 49);
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+/* .menu li:hover {
+  background-color: #000000;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  background-color: white;
+  color:rgb(49, 49, 49);
+  padding: 5px 14px;
+} */
+.menu li a{
+  text-decoration: none;
+  background-color: white;
+  color: rgb(49, 49, 49);
+  padding: 5px 14px;
+}
+.menu li a:hover{
+  background-color: #000000;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+/* DROPDOWN MENU */
+.services {
+  position: relative; 
+}
+
+.dropdown {
+  background-color: rgb(255, 253, 253);
+  color: white;
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border:1px solid rgba(77, 76, 76, 0.678);
+  border-radius: 8px;
+  top: 26px;
+}
+
+.dropdown li + li {
+  margin-top: 0.2em;
+  background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+
+.dropdown a{
+  color: white;
+  background-color: black;
+    
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown a:hover {
+  /* background-color: rgb(0, 0, 0);
+    color: white; */
+}
+.services:hover .dropdown {
+  display: block;
+}
+
+
+
+    /*Howering Shadow*/
+    #desc {
+        margin: 0 0 0 0;
+    }
+
+    #desc div {
+        text-transform: uppercase;
+        color: #e85d04;
+        font: 22px "Comic Sans MS", cursive;
+        -webkit-transition: all 0.12s ease-out;
+        -moz-transition: all 0.12s ease-out;
+        -o-transition: all 0.12s ease-out;
+    }
+
+    #desc div:nth-child(1) {
+        font-size: 22px;
+        letter-spacing: 0.7px;
+    }
+
+    #desc div:nth-child(2) {
+        font-size: 22px;
+        letter-spacing: 0.7px;
+    }
+
+    #desc div:nth-child(3) {
+        font-size: 22px;
+        letter-spacing: 0.7px;
+    }
+
+    #desc div:nth-child(4) {
+        font-size: 22px;
+        letter-spacing: 0.7px;
+    }
+
+    #desc div:nth-child(5) {
+        font-size: 22px;
+        letter-spacing: 0.7px;
+    }
+
+    #desc div:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        text-shadow: 9px 9px 9px #333;
+    }
+
+    #desc a {
+        color: #fe4902;
+        text-decoration: none;
+    }
+
+    /* For Tabs */
+    .tab {
+        display: inline-block;
+        margin-left: 40px;
+    }
+
+    .contain {
+        display: flex;
+        justify-content: center;
+        /* Centers horizontally */
+        align-items: center;
+        /* Centers vertically */
+        /* Adjust as needed or set a specific height */
+    }
+
+    .centered-image {
+        max-width: 100%;
+        /* Ensures the image scales responsively */
+        height: auto;
+        /* Maintains aspect ratio */
+    }
+
+    .hr-lines:before {
+        content: " ";
+        display: block;
+        height: 3px;
+        width: 230px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: #045a54;
+    }
+
+    .hr-lines {
+        position: relative;
+        color: #045a54;
+        font-size: 50px;
+    }
+
+    .hr-lines {
+        position: relative;
+        /*  new lines  */
+        max-width: 850px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .hr-lines:after {
+        content: " ";
+        height: 3px;
+        width: 230px;
+        background: #045a54;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+    }
+
+    .dropmenukaro {
+        background-color: rgb(244, 9, 9);
+        color: black;
+
+    }
+
+    .dropmenukaro:hover {
+        color: white;
+        background-color: black;
+    }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K35SMDC65B"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-K35SMDC65B');
+</script>
+
+<!-- Hotjar Tracking Code for https://indiantourism.github.io/ -->
+<script>
+    (function (h, o, t, j, a, r) {
+        h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+        h._hjSettings = { hjid: 2046499, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script'); r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
+
+
+<header>
+    <marquee class="mar">अतिथि देवो भवः Indian states are famous for its UNIQUE Traditions, Culture, Architecture &
+        Tourism. It is a Social Awareness that aimes at providing the inbound tourist a great sense of being welcomed to the
+        country.
+      </marquee>
+    <nav class="navbar" style="font-family: 'Poppins', sans-serif;border-bottom-style:solid;border-bottom-color: #000000;border-bottom-width: 0.1em;
+">
+        <!-- LOGO -->
+        <div class="logo"><a href="./index.html"><img style="
+          position: relative;
+          display: inline;
+          height: 4rem;
+      
+          " src="./Screenshot (86).png"></a></div>
+    
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+  
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+
+            <li><a href="./index.html">Home</a></li>
+            
+            
+            <li class="services">
+              <a href="#">Explore</a>
+    
+              <!-- DROPDOWN MENU -->
+              <div class="dropdown">
+                <a href="./delhi.html">Delhi </a>
+                <a href="./sikkim.html">Sikkim</a>
+                <a href="./kerala.html">Kerala</a>
+                <a href="./rajasthan.html">Rajasthan</a>
+                <a href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/states/gujarat.html">Gujarat</a>
+                </div>
+    
+            </li>
+            <li><a href="https://www.tripadvisor.in/TravelersChoice-Hotels-cTop-g293860">Hotel</a></li>
+            <li class="services">
+              <a href="#">Others</a>
+    
+              <!-- DROPDOWN MENU -->
+              <div class="dropdown">
+                <a href="./faqs.html">FAQs</a>
+                <a href="./index_packlist.html">Pack Perfect</a>
+                <a href="./currencyconverter.html">Currency Converter</a>
+                <!-- <a href="#">About</a> -->
+                
+                </div>
+    
+            </li>
+            <li><a href="./index_login.html">Login</a></li>
+            
+          </div>
+      </nav>
+      <!-- <div class="butnarr">
+        <a href="./kerala.html"><i class="fas fa-arrow-up"></i></a>
+      </div> -->
+     
+
+</header>
+
+<body>
+    <h1 style="text-align: center;font-size: 3em;">Kerala</h1>
+    <div class="contain">
+
+        <img src="https://www.incredibleindia.org/content/dam/incredible-india-v2/images/states/kerala/keralaand.jpg/jcr:content/renditions/cq5dam.web.1800.737.jpeg"
+            alt="https://images.app.goo.gl/GS5xdhGkiqraLGmMA" class="centered-image">
+    </div>
+    <hr style="margin:20px;">
+    <div
+        style="text-align: center; margin:20px;color: #333;letter-spacing: 0.1rem;font-family:Arial, Helvetica, sans-serif;">
+        Kerala is blessed with a unique set of geographical features that have made it one of the most sought after
+        tourist destinations in Asia. A long shoreline with serene beaches, tranquil stretches of emerald backwaters,
+        lush hill stations and exotic wildlife, are just a few of the wonders. Most of the state is engulfed in rich
+        greenery which ensures a very calming experience at all times. Bestowed with a pleasant and equable climate
+        throughout the year, Kerala is a tropical land where one can relax and be at ease.<br><br>
+        Kerala is a  tropical paradise where you can paddle in tranquil backwaters, trek the rocky Western Ghats, chase the mists in the hill stations, rejuvenate with pristine Nature and Ayurvedic treatments, hug the unspoiled beaches and so much more.  Kerala isn’t just a destination; it’s a saga of experiences!<br><br>
+        Golden beaches, emerald backwaters, lofty mountain ranges, powerful art forms the choices are many and so are the wonders that await you in Kerala. Come and take home what they call ‘memories’, the kind that makes life worth living.
+
+        Kerala is teeming with events and festivals round the year so be sure to keep track of what happens when and where so as to be able to enjoy your trip to the fullest. From Cultural fairs like the Kochi Muziris Biennale to the legendary boat races of Kerala and other ritualistic festivals and celebrations, the list is endless.
+    </div>
+    <h2 class="hr-lines">
+        <div> Major Attraction </div>
+    </h2>
+    <section class="carousel">
+
+
+        <div class="carousel__container">
+            <a href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/kottayam.html">
+                <div class="carousel-item">
+
+                    <img class="carousel-item__img" src="https://www.konkan.me/wp-content/uploads/2024/05/1-Top-10-Places-to-visit-in-Kottayam.jpg" alt="people" />
+                    <div class="carousel-item__details">
+                        <div class="controls">
+                            <span class="fas fa-play-circle"></span>
+                            <span class="fas fa-plus-circle"></span>
+                        </div>
+                        <h2 class="carousel-item__details--title">Kottayam</h2>
+                        <h4 class="carousel-item__details--subtitle">
+                            Land of Lakes</h4>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/kollam.html">
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://i.redd.it/7adn7fc3a2s21.jpg" alt="people" />
+                    <div class="carousel-item__details">
+                        <div class="controls">
+                            <span class="fas fa-play-circle"></span>
+                            <span class="fas fa-plus-circle"></span>
+                        </div>
+                        <h2 class="carousel-item__details--title">Kollam</h2>
+                        <h4 class="carousel-item__details--subtitle">Cashew capital of the world</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/munnar.html">
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://keralabee.com/wp-content/uploads/2023/06/IMG_20230624_001703-768x1024.webp" alt="people" />
+                    <div class="carousel-item__details">
+                        <div class="controls">
+                            <span class="fas fa-play-circle"></span>
+                            <span class="fas fa-plus-circle"></span>
+                        </div>
+                        <h2 class="carousel-item__details--title">Munnar</h2>
+                        <h4 class="carousel-item__details--subtitle">Hills of Paradise</h4>
+                    </div>
+                </div>
+            </a>
+
+            <a
+                href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/kumarakom.html">
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://i.pinimg.com/736x/90/fc/a0/90fca04004a08d01fa990a32b4a73cdb.jpg" alt="people" />
+                    <div class="carousel-item__details">
+                        <div class="controls">
+                            <span class="fas fa-play-circle"></span>
+                            <span class="fas fa-plus-circle"></span>
+                        </div>
+                        <h2 class="carousel-item__details--title">Kumarakom</h2>
+                        <h4 class="carousel-item__details--subtitle">The boat stops here</h4>
+                    </div>
+                </div>
+
+            </a>
+            <a
+                href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/palakkad.html">
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://i.pinimg.com/originals/ab/e4/d1/abe4d1a425d35ccc8bbd92b66726ae22.jpg" alt="people" />
+                    <div class="carousel-item__details">
+                        <div class="controls">
+                            <span class="fas fa-play-circle"></span>
+                            <span class="fas fa-plus-circle"></span>
+                        </div>
+                        <h2 class="carousel-item__details--title">Palakkad</h2>
+                        <h4 class="carousel-item__details--subtitle">A Natural Reserve</h4>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/thrissur.html">
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://www.konkan.me/wp-content/uploads/2024/03/1-Places-to-Visit-in-Thrissur.jpg" alt="people" />
+                    <div class="carousel-item__details">
+                        <div class="controls">
+                            <span class="fas fa-play-circle"></span>
+                            <span class="fas fa-plus-circle"></span>
+                        </div>
+                        <h2 class="carousel-item__details--title">Thrissur</h2>
+                        <h4 class="carousel-item__details--subtitle"> Cultural Capital of Kerala
+
+
+
+                        </h4>
+                    </div>
+                </div>
+            </a>
+            <a
+                href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/thiruvananthapuram.html">
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTePhW57seGTGOwOBr0ee9aopzW3KXb5xh7kw&s" alt="people" />
+                    <div class="carousel-item__details">
+                        <div class="controls">
+                            <span class="fas fa-play-circle"></span>
+                            <span class="fas fa-plus-circle"></span>
+                        </div>
+                        <h2 class="carousel-item__details--title">Thiruvananthapuram</h2>
+                        <h4 class="carousel-item__details--subtitle">Cornucopia of culture</h4>
+                    </div>
+                </div>
+            </a>
+
+            <a
+                href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/alappuzha.html">
+                <div class="carousel-item">
+                    <img class="carousel-item__img" src="https://www.alappuzhatourism.com/files/menuboxes/1006255172.webp" alt="people" />
+                    <div class="carousel-item__details">
+                        <div class="controls">
+                            <span class="fas fa-play-circle"></span>
+                            <span class="fas fa-plus-circle"></span>
+                        </div>
+                        <h2 class="carousel-item__details--title">Alappuzha</h2>
+                        <h4 class="carousel-item__details--subtitle">Venice of the East</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+
+
+
+    <h2 class="hr-lines">
+        <div> Foods
+
+        </div>
+    </h2>
+    <div>
+
+    </div>
+
+
+
+    <div class="wrapper">
+
+        <div class="card">
+            <div class="poster"><img src="https://www.abhibus.com/blog/wp-content/uploads/2023/07/Idli-Sambar.jpg" alt="Chole Bhature"></div>
+            <div class="details">
+                <h1>Idli Sambar</h1>
+
+                <p class="desc">
+                    In Kerala, idli sambar is a quintessential breakfast—fluffy idlis soaking in rich, spicy sambar. It’s a soulful start to the day with every comforting bite.</p>
+                <div class="cast">
+                    <a class="abtudekh" href="https://www.swiggy.com/city/kochi/idli-dish-restaurants">Know
+                        More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="poster"><img src="https://www.holidify.com/blog/wp-content/uploads/2015/11/5560884820_0f69406f21_z.jpg" alt="Butter Chicken"></div>
+            <div class="details">
+                <h1>Kerala Prawn Curry</h1>
+
+                <p class="desc">
+                    Kerala prawn curry is a culinary masterpiece—tender prawns simmered in a rich, spicy coconut sauce. A taste of tropical perfection in every bite. </p>
+                <div class="cast">
+                    <a class="abtudekh"
+                        href="https://www.keralatourism.org/responsible-tourism/ethnic-cuisine/dishes/chemmeen-kari-or-prawn-curry-units/17">Know
+                        More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="poster"><img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2017/10/Parippu-Curry.jpg" alt="Momos"></div>
+            <div class="details">
+                <h1>Parippu Curry (Dal Curry)
+                </h1>
+
+                <p class="desc">
+                    Parippu curry in Kerala is a heartwarming dish—creamy, spiced dal cooked to perfection. A comforting, soulful experience in every spoonful.</p>
+                <div class="cast">
+                    <a class="abtudekh" href="https://www.keralatourism.org/responsible-tourism/ethnic-cuisine/dishes/sambar-spicy-dal-based-vegetarian-curry-units/133">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="poster"><img src="https://clubmahindra.gumlet.io/blog/images/Thoran-resized.jpg?w=800&dpr=1.5" alt="Chaat"></div>
+            <div class="details">
+                <h1>Thoran</h1>
+
+                <p class="desc">
+                    Thoran in Kerala is a vibrant, veggie-packed stir-fry—freshly grated coconut and spices bring out the natural flavors. A delightful, crunchy side dish with every bite.</p>
+                <div class="cast">
+                    <a class="abtudekh"
+                        href="https://www.keralatourism.org/responsible-tourism/ethnic-cuisine/dishes/chicken-thoran-units/24">Know
+                        More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="poster"><img src="https://b3681537.smushcdn.com/3681537/wp-content/uploads/2015/05/avial-lunch-food-in-kerala.gif?lossy=2&strip=1&webp=1" alt="Rabri Faluda"></div>
+            <div class="details">
+                <h1>Avial</h1>
+
+                <p class="desc">
+                    Avial in Kerala is a creamy, colorful medley of vegetables cooked with coconut and yogurt. It's a rich, comforting dish that blends tradition with taste. </p>
+                <div class="cast">
+                    <a class="abtudekh"
+                        href="https://www.keralatourism.org/responsible-tourism/ethnic-cuisine/dishes/avial-vegetarian-dish-units/11">Know
+                        More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="poster"><img src="https://b3681537.smushcdn.com/3681537/wp-content/uploads/2015/05/kerala-beef-fry-food.gif?lossy=2&strip=1&webp=1" alt="Paratha"></div>
+            <div class="details">
+                <h1>Kerala Style Chicken Fry</h1>
+
+                <p class="desc">
+                    Kerala-style chicken fry is a flavorful sensation—succulent chicken slow-cooked with aromatic spices and curry leaves. A spicy, crispy delight in every bite.</p>
+                <div class="cast">
+                    <a class="abtudekh"
+                        href="https://www.keralatourism.org/responsible-tourism/ethnic-cuisine/dishes/beef-fry-units/12">Know More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="hr-lines">
+        <div> Hotels</div>
+    </h2>
+
+
+    <section class="carousel">
+
+
+        <div class="carousel__container">
+            <!-- <a href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/delhi/red-fort.html"> -->
+            <div class="carousel-item">
+
+                <img class="carousel-item__img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/a8/6c/4f/chandys-windy-woods.jpg?w=500&h=500&s=1" alt="people" />
+                <div class="carousel-item__details" style="padding-bottom: 40px;">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <div style="background-color: rgba(0, 0, 0, .2);">
+                        <h2 class="carousel-item__details--title" style="text-align: center;">Chandys Windy Woods</h2>
+                        <h5 class="carousel-item__details--subtitle" style="text-align: center;">
+                            Located in Munnar</h5>
+                        <p class="carousel-item__details--subtitle" style="text-align: center;"><a
+                                class="maikarungahover"
+                                href="https://www.tripadvisor.in/Hotel_Review-g5258996-d7281489-Reviews-Chandys_Windy_Woods-Chithirapuram_Munnar_Idukki_District_Kerala.html">Book</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- </a> -->
+            <div class="carousel-item">
+
+                <img class="carousel-item__img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/52/35/c5/the-windsor-castle.jpg?w=500&h=500&s=1" alt="people" />
+                <div class="carousel-item__details" style="padding-bottom: 40px;">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <div style="background-color: rgba(0, 0, 0, .2);">
+                        <h2 class="carousel-item__details--title" style="text-align: center;">Windsor Castle
+                        </h2>
+                        <h5 class="carousel-item__details--subtitle" style="text-align: center;">
+                            Located in kottayam </h5>
+                        <p class="carousel-item__details--subtitle" style="text-align: center;"><a
+                                class="maikarungahover"
+                                href="https://www.tripadvisor.in/Hotel_Review-g297634-d545895-Reviews-The_Windsor_Castle-Kottayam_Kottayam_District_Kerala.html">Book</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="carousel-item">
+
+                <img class="carousel-item__img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/68/fd/67/the-world-backwaters.jpg?w=500&h=500&s=1" alt="people" />
+                <div class="carousel-item__details" style="padding-bottom: 40px;">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <div style="background-color: rgba(0, 0, 0, .2);">
+                        <h2 class="carousel-item__details--title" style="text-align: center;">World Backwaters</h2>
+                        <h5 class="carousel-item__details--subtitle" style="text-align: center;">
+                            Located in Alappuzha</h5>
+                        <p class="carousel-item__details--subtitle" style="text-align: center;"><a
+                                class="maikarungahover"
+                                href="https://www.tripadvisor.in/Hotel_Review-g608471-d1682053-Reviews-The_World_Backwaters-Alappuzha_Alappuzha_District_Kerala.html">Book</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="carousel-item">
+
+                <img class="carousel-item__img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/ae/61/91/exterior.jpg?w=500&h=500&s=1" alt="people" />
+                <div class="carousel-item__details" style="padding-bottom: 40px;">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <div style="background-color: rgba(0, 0, 0, .2);">
+                        <h2 class="carousel-item__details--title" style="text-align: center;">Hilton Garden Inn</h2>
+                        <h5 class="carousel-item__details--subtitle" style="text-align: center;">
+                            Located in Thiruvananthapuram</h5>
+                        <p class="carousel-item__details--subtitle" style="text-align: center;"><a
+                                class="maikarungahover"
+                                href="https://www.tripadvisor.in/Hotel_Review-g297637-d5489270-Reviews-Hilton_Garden_Inn_Trivandrum-Thiruvananthapuram_Trivandrum_Thiruvananthapuram_District.html">Book</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+
+                <img class="carousel-item__img"
+                    src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/ac/68/7f/2-bedroom-cottage-overlooking.jpg?w=500&h=500&s=1"
+                    alt="people" />
+                <div class="carousel-item__details" style="padding-bottom: 40px;">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <div style="background-color: rgba(0, 0, 0, .2);">
+                        <h2 class="carousel-item__details--title" style="text-align: center;">Oxy Valley Resorts</h2>
+                        <h5 class="carousel-item__details--subtitle" style="text-align: center;">
+                            Located in Palakkad</h5>
+                        <p class="carousel-item__details--subtitle" style="text-align: center;"><a
+                                class="maikarungahover"
+                                href="https://www.tripadvisor.in/Hotel_Review-g1096235-d23943083-Reviews-Oxy_Valley_Resorts-Palakkad_Palakkad_District_Kerala.html">Book</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+
+                <img class="carousel-item__img"
+                    src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/bf/b3/c2/rhythm-kumarakom.jpg?w=500&h=500&s=1"
+                    alt="people" />
+                <div class="carousel-item__details" style="padding-bottom: 40px;">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <div style="background-color: rgba(0, 0, 0, .2);">
+                        <h2 class="carousel-item__details--title" style="text-align: center;">Rhythm Kumarakom</h2>
+                        <h5 class="carousel-item__details--subtitle" style="text-align: center;">
+                            Located in Kumarakom</h5>
+                        <p class="carousel-item__details--subtitle" style="text-align: center;"><a
+                                class="maikarungahover"
+                                href="https://www.tripadvisor.in/Hotel_Review-g678552-d7604875-Reviews-Rhythm_Kumarakom-Kumarakom_Kottayam_District_Kerala.html">Book</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="carousel-item">
+
+                <img class="carousel-item__img"
+                    src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/65/12/73/the-raviz-ashtamudi.jpg?w=500&h=500&s=1"
+                    alt="people" />
+                <div class="carousel-item__details" style="padding-bottom: 40px;">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <div style="background-color: rgba(0, 0, 0, .2);">
+                        <h2 class="carousel-item__details--title" style="text-align: center;">The Leela Ashtamudi </h2>
+                        <h5 class="carousel-item__details--subtitle" style="text-align: center;">
+                            Located in Kollam</h5>
+                        <p class="carousel-item__details--subtitle" style="text-align: center;"><a
+                                class="maikarungahover"
+                                href="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/65/12/73/the-raviz-ashtamudi.jpg?w=500&h=500&s=1">Book</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="carousel-item">
+
+                <img class="carousel-item__img"
+                    src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/b3/b8/98/samroha-resort-athirapilly.jpg?w=500&h=500&s=1"
+                    alt="people" />
+                <div class="carousel-item__details" style="padding-bottom: 40px;">
+                    <div class="controls">
+                        <span class="fas fa-play-circle"></span>
+                        <span class="fas fa-plus-circle"></span>
+                    </div>
+                    <div style="background-color: rgba(0, 0, 0, .2);">
+                        <h2 class="carousel-item__details--title" style="text-align: center;">Niraamaya Retreats Samroha</h2>
+                        <h5 class="carousel-item__details--subtitle" style="text-align: center;">
+                            Located in Athirappilly</h5>
+                        <p class="carousel-item__details--subtitle" style="text-align: center;"><a
+                                class="maikarungahover"
+                                href="https://www.tripadvisor.in/Hotel_Review-g2289004-d16879383-Reviews-Niraamaya_Retreats_Samroha_Athirappilly-Athirappilly_Thrissur_District_Kerala.html">Book</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <a class="btnc btnc-primary f-r chat"
+        href="https://www.incredibleindia.org/content/incredible-india-v2/en.html">Personalize</a>
+    <!-- <a class="btnh btnh-primary f-rh hchat" href="https://www.makemytrip.com/hotels/five_star-hotels-delhi.html">Book Hotels</a>   -->
+</body>
+<style>
+    * {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .footer{
+    background-color: black;padding: 5px;
+}
+.text-center{
+    text-align: center ;
+}
+.text-white{
+    color: white;
+}
+
+    .btnc {
+        padding: 3px 10px 5px 10px;
+        border-radius: 2em;
+    }
+
+    .btnc-primary {
+        background-image: radial-gradient(circle, #f1ff00, #f7f000, #fbe100, #fdd200, #fec300);
+        color: black;
+    }
+
+    .f-r {
+        float: right;
+        position: sticky;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .chat:hover {
+        background: rgb(18, 18, 255);
+        /* border: 0.2em solid rgb(0, 0, 0); */
+        color: rgb(255, 255, 255);
+        box-shadow: 3px 3px 1px rgb(0, 0, 0);
+    }
+
+    .abtudekh {
+        border-radius: 1em;
+        border: 2px solid white;
+        background-color: orange;
+        padding: 10px;
+        color: black;
+    }
+
+    .abtudekh:hover {
+        background-color: white;
+        color: blue;
+    }
+
+    .maikarungahover {
+        border-radius: 1em;
+
+        background-color: dodgerblue;
+        padding: 0.3em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        color: white;
+        font-size: 1rem;
+    }
+
+    .maikarungahover:hover {
+        background-color: #e3c414;
+        color: black;
+        box-shadow: 2px 2px 1px white;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    .wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        position: relative;
+        width: 355px;
+        height: 400px;
+        background: #000;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    }
+
+    .poster {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .poster::before {
+        content: '';
+        position: absolute;
+        bottom: -45%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: .3s;
+    }
+
+    .card:hover .poster::before {
+        bottom: 0;
+    }
+
+    .poster img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .3s;
+    }
+
+    .card:hover .poster img {
+        transform: scale(1.1);
+    }
+
+    .details {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 1.5em 1.5em 2em;
+        background: #000a;
+        backdrop-filter: blur(16px) saturate(120%);
+        transition: .3s;
+        color: #fff;
+        z-index: 2;
+    }
+
+    .card:hover .details {
+        bottom: 0;
+    }
+
+    .details h1,
+    .details h2 {
+        font-weight: 700;
+    }
+
+    .details h1 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+
+    .details h2 {
+        font-weight: 400;
+        font-size: 1em;
+        margin-bottom: 10px;
+        opacity: .6;
+    }
+
+    .details .rating {
+        position: relative;
+        margin-bottom: 15px;
+        display: flex;
+        gap: .25em;
+    }
+
+    .details .rating i {
+        color: #e3c414;
+    }
+
+    .details .rating span {
+        margin-left: 0.25em;
+    }
+
+    .details .tags {
+        display: flex;
+        gap: .375em;
+        margin-bottom: .875em;
+        font-size: .85em;
+    }
+
+    .details .tags span {
+        padding: .35rem .65rem;
+        color: #fff;
+        border: 1.5px solid rgba(255 255 255 / 0.4);
+        border-radius: 4px;
+        border-radius: 50px;
+    }
+
+    .details .desc {
+        color: #fff;
+        opacity: .8;
+        line-height: 1.5;
+        margin-bottom: 1em;
+        margin-right: 1em;
+        /* margin-left: 1em; */
+        padding-right: 1em;
+    }
+
+    .details .cast h3 {
+        margin-bottom: .5em;
+    }
+
+    .details .cast ul {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.625rem;
+        width: 100%;
+    }
+
+    .details .cast ul li {
+        list-style: none;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1.5px solid #fff;
+    }
+
+    .details .cast ul li img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .background-texture {
+        background: -webkit-gradient(linear,
+                left bottom,
+                left top,
+                from(#0f0140e6),
+                to(rgba(255, 214, 117, 0.9)));
+        background: linear-gradient(to top, #0f0140e6, rgba(255, 214, 117, 0.9));
+        background-size: cover;
+        width: 100%;
+        height: 1000px;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+    }
+
+    .carousel {
+        width: 100%;
+        overflow-x: scroll;
+        padding: 30px;
+        padding-top: 80px;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .carousel__container {
+        white-space: nowrap;
+        margin: 25px 0px;
+        padding-bottom: 10px;
+        display: inline-block;
+    }
+
+    .categories__title {
+        color: rgb(77, 55, 102);
+        font-size: 28px;
+        position: absolute;
+        padding-left: 30px;
+    }
+
+    .carousel-item {
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        background-color: #95bcd6;
+        overflow: hidden;
+        margin-right: 25px;
+        margin-top: 0px;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-transition: 1000ms all;
+        transition: 1000ms all;
+        -webkit-transform-origin: center left;
+        transform-origin: center left;
+        position: relative;
+    }
+
+    .carousel-item:hover~.carousel-item {
+        -webkit-transform: translate3d(100px, 0, 0);
+        transform: translate3d(100px, 0, 0);
+    }
+
+    .carousel__container:hover .carousel-item {
+        opacity: 0.15;
+    }
+
+    .carousel__container:hover .carousel-item:hover {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    .carousel-item__img {
+        width: 200px;
+        height: 250px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+
+    .carousel-item__details {
+        background: -webkit-gradient(linear,
+                left bottom,
+                left top,
+                from(rgba(0, 0, 0, 0.9)),
+                to(rgba(0, 0, 0, 0)));
+        background: linear-gradient(to top,
+                rgba(0, 0, 0, 1) 0%,
+                rgba(0, 0, 0, 0) 0%);
+        font-size: 10px;
+        opacity: 0;
+        -webkit-transition: 450ms opacity;
+        transition: 450ms opacity;
+        padding: 2px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .carousel-item__details:hover {
+        opacity: 1;
+    }
+
+    .carousel-item__details span {
+        width: 10px;
+        height: 10px;
+        font-size: 0.9rem;
+        color: #2ecc71;
+        background-color: white;
+    }
+
+    .carousel-item__details .controls {
+        padding-top: 180px;
+    }
+
+    .carousel-item__details .carousel-item__details--title,
+    .carousel-item__details--subtitle {
+        color: #fff;
+        margin: 5px 0;
+    }
+</style>
+<footer class="footer-distributed" style="font-family: Open Sans;">
+
+    <div class="footer-left">
+
+        <h3><a href="./index.html"><img style="
+  position: relative;
+  display: inline;
+  height: 4rem;
+
+  " src="./Screenshot (93).png"></a></h3>
+
+        <p class="footer-links">
+            <a href="./index.html" class="link-1">Home</a>
+            <a href="./faqs.html">Faq</a>
+  <a href="https://www.tripadvisor.in/TravelersChoice-Hotels-cTop-g293860">Hotel</a>
+            
+            <a href="./currencyconverter.html">Currency Converter</a>
+        </p>
+
+        <p class="footer-company-name" style="color: #b9c0c6;">Voyage INDIA © 2024</p>
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span style="font-size:medium;">Address: A-2, Roop Nagar,</span>Model Town, Delhi, India</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>Ph. No.: +919837625766</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p>E-mail: <a href="voyageINDIA@gmail.com">support@company.com</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>About</span>
+            Voyage-India is a dynamic website project dedicated to Indian tourism. It showcases the rich cultural heritage, popular destinations, and travel tips for exploring India.
+        </p>
+
+        <!-- <div class="footer-icons">
+
+            <a href="https://www.facebook.com/AjazKhanActor/"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+
+        </div> -->
+
+    </div>
+
+</footer>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+
+.sucsuc {
+ width: 100%;
+ display: inline-block;
+ background: #666666;
+ height: 50vh;
+ text-align: center;
+ font-size: 22px;
+ font-weight: 700;
+ /* border: 0.2em solid black; */
+ text-decoration: underline;
+}
+
+.footer-distributed{
+   background-color: black;
+   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+   box-sizing: border-box;
+   width: 100%;
+   text-align: left;
+   font: bold 16px sans-serif;
+   padding: 55px 50px;
+ /* border: 0.2em solid black; */
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+   display: inline-block;
+   vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+   width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+   color:  #ffffff;
+   font: normal 36px 'Open Sans', cursive;
+   margin: 0;
+}
+
+.footer-distributed h3 span{
+   color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+   color:  #ffffff;
+   margin: 20px 0 12px;
+   padding: 0;
+}
+
+.footer-distributed .footer-links a{
+   display:inline-block;
+   line-height: 1.8;
+ font-weight:400;
+   text-decoration: none;
+   color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+   color:  #222;
+   font-size: 14px;
+   font-weight: normal;
+   margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+   width: 35%;
+}
+
+.footer-distributed .footer-center i{
+   background-color:  #666666;
+   color: #ffffff;
+   font-size: 25px;
+   width: 38px;
+   height: 38px;
+   border-radius: 50%;
+   text-align: center;
+   line-height: 42px;
+   margin: 10px 15px;
+   vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+   font-size: 17px;
+   line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+   display: inline-block;
+   color: #ffffff;
+ font-weight:400;
+   vertical-align: middle;
+   margin:0;
+}
+
+.footer-distributed .footer-center p span{
+   display:block;
+   font-weight: normal;
+   font-size:14px;
+   line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+   color:  lightseagreen;
+   text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+ content: "|";
+ font-weight:300;
+ font-size: 20px;
+ left: 0;
+ color: #fff;
+ display: inline-block;
+ padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+ content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+   width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+   line-height: 20px;
+   color:  #92999f;
+   font-size: 13px;
+   font-weight: normal;
+   margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+   display: block;
+   color:  #ffffff;
+   font-size: 14px;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+   margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+   display: inline-block;
+   width: 35px;
+   height: 35px;
+   cursor: pointer;
+   background-color:  #33383b;
+   border-radius: 2px;
+
+   font-size: 20px;
+   color: #ffffff;
+   text-align: center;
+   line-height: 35px;
+
+   margin-right: 3px;
+   margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+   .footer-distributed{
+       font: bold 14px sans-serif;
+   }
+
+   .footer-distributed .footer-left,
+   .footer-distributed .footer-center,
+   .footer-distributed .footer-right{
+       display: block;
+       width: 100%;
+       margin-bottom: 40px;
+       text-align: center;
+   }
+
+   .footer-distributed .footer-center i{
+       margin-left: 0;
+   }
+
+}
+</style>
+</html>
